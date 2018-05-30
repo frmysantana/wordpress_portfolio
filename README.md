@@ -1,0 +1,1 @@
+After completing a course on custom Wordpress development, I decided to re-create my portfolio website with WordPress as a way of practicing these new skills. 
