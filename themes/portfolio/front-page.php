@@ -2,6 +2,7 @@
   <div>
     <h3>About</h3>
   </div>
+  <hr>
   <div>
     <h3>Latest Projects</h3>
   </div>

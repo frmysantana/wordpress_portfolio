@@ -7,6 +7,6 @@
   </head>
   <body>
     <header>
-      <h1><a href="#">Home</a></h1>
-      <h1><a href="#">All Projects</a></h1>
+      <h1 class="nav-option"><a href="#">Home</a></h1>
+      <h1 class="nav-option"><a href="#">All Projects</a></h1>
     </header>
