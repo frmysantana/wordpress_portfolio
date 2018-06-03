@@ -5,6 +5,7 @@
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Libre+Franklin:300,400');
     // wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime()); // load in style.css
+    add_theme_support('post-thumbnails');
   };
 
   add_action('wp_enqueue_scripts', 'site_styles_n_scripts');

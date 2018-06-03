@@ -3,6 +3,9 @@ Theme Name: My Portfolio
 Author: Fremy Santana
 Version: 1.0
 */
+html {
+  font-size: 10px;
+}
 
 * {
   box-sizing: border-box;
@@ -12,12 +15,25 @@ body {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .container {
   width: 90%;
 }
 
-header, footer{
-  background-color: rgb(230, 30, 30);
+.current-page {
+  background-color: blue;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+header, footer {
+  background-color: #e61e1e;
   height: 5vw;
   width: 100%;
 }
@@ -35,14 +51,4 @@ footer > * {
   width: 33%;
 }
 
-/* .footer-social-media > * {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-} */
-
-a {
-  color: inherit;
-  text-decoration: none;  
-}
-
+/*# sourceMappingURL=style.css.map */

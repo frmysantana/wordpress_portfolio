@@ -9,20 +9,17 @@
     <div>
       <h3>Latest Projects</h3>
       <?php 
-      // Projects Query here
-
+      
       $projects = new WP_Query(array(
-        'posts_per_page' => 1
+        'posts_per_page' => 2
       ));
 
-      // while($projects->have_posts()) {
-      //   $projects->the_post();
-      //   print_r(the_title());
-      
-      
-      print_r($projects->live_link);
+      while($projects->have_posts()) {
+        $projects->the_post(); ?>
+        <a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image(get_field('project_image')[id]); ?></a>
+      <?php }
       ?>
-      <a><h4>See all projects<h4></a>      
+      <a href="<?php echo site_url('/blog'); ?>"><h4>See all projects<h4></a>      
     </div>
   </div>
 <?php get_footer(); ?>
