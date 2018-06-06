@@ -1,0 +1,41 @@
+// .archive-image {
+//   height: 250px;
+//   width: 360px;
+// }
+
+.container__archive {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.archive-title {
+  font-size: 3.5rem;
+}
+
+.archive-read-more {
+  font-size: 2rem;
+}
+
+.column {
+  flex-direction: column;
+  margin-left: 100px;
+
+  p {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.container__pagination {
+  font-size: 3.8rem;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  max-width: 1245px;
+}
+
+span.current {
+  font-weight: bold;
+}

@@ -1,5 +1,7 @@
 $red: rgb(230, 30, 30);
-$blue: blue;
+$blue: rgb(18, 154, 222);
+
+$margin-space: 160px;
 
 html {
   font-size: 10px;
@@ -7,13 +9,31 @@ html {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
   
 body {
+  font-family: 'Libre Franklin', sans-serif;
   margin: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;  
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1245px;
+}
+
+@mixin head-and-foot {
+  background-color: $red;
+  height: 220px;
+  width: 100%;
 }

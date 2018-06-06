@@ -1,15 +1,19 @@
 <?php get_header(); ?>
-  <div>
+  <div class="single">
     <?php 
       while(have_posts()) {
         the_post(); ?>
-        <h2><?php the_title(); ?></h2>
-        <?php echo wp_get_attachment_image(get_field('project_image')[id]); ?>
-        <a href="<?php the_field('live_link'); ?>"><p>See the project live.</p>
-        <a href="<?php the_field('repo_link'); ?>"<p>See the project repo.</p>
-        <p><?php the_content(); ?></p>
+        <h2 class="section-title"><?php the_title(); ?></h2>
+        <?php 
+        echo "<div class='container'>";
+        echo wp_get_attachment_image(get_field('project_image')[id]); ?>
+        <a href="<?php the_field('live_link'); ?>">See the project live.</a>
+        <a href="<?php the_field('repo_link'); ?>">See the project repo.</a>
+        <?php the_content(); ?>
         <a href="<?php echo site_url('/blog') ?>">See all projects</a>
-    <?php  } 
+    <?php  
+    echo "</div>";
+    } 
     ?>
   </div>
 <?php get_footer(); ?>

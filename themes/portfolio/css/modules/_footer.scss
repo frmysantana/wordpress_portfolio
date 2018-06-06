@@ -1,0 +1,23 @@
+footer {
+  @include head-and-foot;
+
+  & p {
+    font-size: 2rem;
+  }
+
+  & a {
+    font-size: 1.6rem;
+    padding-left: 18px;
+    margin-bottom: 5px;
+  }
+}
+
+.social-media-div {
+  display: flex;
+  flex-direction: column;
+}
+
+#social-media {
+  border-bottom: 3px solid black;
+  font-weight: 400;
+}

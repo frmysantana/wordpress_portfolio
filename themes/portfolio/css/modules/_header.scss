@@ -1,0 +1,25 @@
+header {
+  @include head-and-foot;
+}
+
+.nav-option {
+  border-radius: 10px;
+  font-size: 4.5rem;
+  font-weight: normal;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  width: 340px;
+
+  &:first-of-type {
+    margin-left: $margin-space;
+  }
+
+  &:last-of-type {
+    margin-right: $margin-space;
+  }
+}
+
+.current-page {
+  background-color: $blue;
+}

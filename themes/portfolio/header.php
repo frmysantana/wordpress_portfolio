@@ -7,6 +7,8 @@
   </head>
   <body>
     <header>
-      <h1 class="nav-option <?php if (is_page('Home')) echo 'current-page'; ?>"><a href="<?php echo site_url(); ?>">Home</a></h1>
-      <h1 class="nav-option <?php if (get_queried_object_id() == 23) echo 'current-page'; else echo "failed"; ?>"><a href="<?php echo site_url('/blog'); ?>">All Projects</a></h1>
+      <div class="container">
+        <a href="<?php echo site_url(); ?>"><h1 class="nav-option <?php if (is_page('Home')) echo 'current-page'; ?>">HOME</h1></a>
+        <a href="<?php echo site_url('/blog'); ?>"><h1 class="nav-option <?php if (get_queried_object_id() == 23) echo 'current-page'; else echo "failed"; ?>">ALL PROJECTS</h1></a>
+      </div>      
     </header>

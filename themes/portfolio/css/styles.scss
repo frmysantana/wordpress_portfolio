@@ -5,6 +5,9 @@ Version: 1.0
 */
 
 @import './base';
-@import './modules';
-
-
+@import './modules/header';
+@import './modules/footer';
+@import './modules/about';
+@import './modules/latest-projects';
+@import './modules/single';
+@import './modules/index';
