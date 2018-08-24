@@ -4,18 +4,27 @@ Author: Fremy Santana
 Version: 1.0
 */
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 body {
+  box-sizing: border-box;
   font-family: "Libre Franklin", sans-serif;
   margin: 0;
+}
+body--fill-page {
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  right: 0;
 }
 
 a {
@@ -29,29 +38,29 @@ a {
   justify-content: space-between;
   margin: 0 auto;
   height: 100%;
-  max-width: 1245px;
+  max-width: 124.5rem;
 }
 
 header {
   background-color: #e61e1e;
-  height: 220px;
+  height: 22rem;
   width: 100%;
 }
 
 .nav-option {
-  border-radius: 10px;
+  border-radius: 1rem;
   font-size: 4.5rem;
   font-weight: normal;
-  height: 100px;
-  line-height: 100px;
+  height: 10rem;
+  line-height: 10rem;
   text-align: center;
-  width: 340px;
+  width: 34rem;
 }
 .nav-option:first-of-type {
-  margin-left: 160px;
+  margin-left: 16rem;
 }
 .nav-option:last-of-type {
-  margin-right: 160px;
+  margin-right: 16rem;
 }
 
 .current-page {
@@ -60,7 +69,7 @@ header {
 
 footer {
   background-color: #e61e1e;
-  height: 220px;
+  height: 22rem;
   width: 100%;
 }
 footer p {
@@ -68,8 +77,14 @@ footer p {
 }
 footer a {
   font-size: 1.6rem;
-  padding-left: 18px;
-  margin-bottom: 5px;
+  padding-left: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer--fill-page {
+  position: absolute;
+  top: 83%;
+  left: 0;
 }
 
 .social-media-div {
@@ -78,42 +93,42 @@ footer a {
 }
 
 #social-media {
-  border-bottom: 3px solid black;
+  border-bottom: 0.3rem solid black;
   font-weight: 400;
 }
 
 #about {
-  margin-top: 50px;
-  margin-bottom: 150px;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
 }
 #about h3 {
   font-size: 3.3rem;
-  font-weight: 400;
+  font-weight: 900;
   text-align: center;
 }
 #about img {
-  height: 300px;
-  width: 500px;
-  margin-top: 90px;
-  margin-left: 85px;
+  height: 30rem;
+  width: 50rem;
+  margin-top: 9rem;
+  margin-left: 8.5rem;
 }
 #about p {
   font-size: 2.5rem;
 }
 
 #latest-projects {
-  margin-top: 50px;
-  margin-bottom: 120px;
+  margin-top: 5rem;
+  margin-bottom: 12rem;
 }
 #latest-projects h3 {
   font-size: 3.5rem;
   text-align: center;
 }
 #latest-projects img {
-  height: 450px;
-  margin-top: 110px;
-  margin-bottom: 80px;
-  width: 550px;
+  height: 45rem;
+  margin-top: 11rem;
+  margin-bottom: 8rem;
+  width: 55rem;
 }
 #latest-projects h4 {
   font-size: 2.5rem;
@@ -121,38 +136,42 @@ footer a {
 }
 
 .section-title {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 900;
   text-align: center;
 }
 
 .single .container {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   flex-direction: column;
 }
 .single .container img {
-  margin-bottom: 125px;
-  height: 450px;
-  width: 550px;
+  margin-bottom: 12.5rem;
+  height: 45rem;
+  width: 55rem;
 }
 .single .container a {
   font-size: 2rem;
 }
 .single .container a:nth-of-type(2) {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .single .container p {
   font-size: 2rem;
+  text-indent: 5rem;
 }
 .single .container p:last-of-type {
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 }
 
 .container__archive {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.container__archive--single {
+  margin-top: 13rem;
 }
 
 .archive-title {
@@ -165,21 +184,21 @@ footer a {
 
 .column {
   flex-direction: column;
-  margin-left: 100px;
+  margin-left: 10rem;
 }
 .column p {
   font-size: 2.5rem;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .container__pagination {
   font-size: 3.8rem;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
-  max-width: 1245px;
+  max-width: 124.5rem;
 }
 
 span.current {

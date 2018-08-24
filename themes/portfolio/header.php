@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
   </head>
-  <body>
+  <?php $post_count = get_post_count();?>
+  <body <?php 
+    // conditionally apply fill classes only if their is 1 blog post summary on the blog page.
+    // is_home() checks if the current page is the blog index
+    if(is_home() AND $post_count == 1) { echo 'class="body--fill-page"';} 
+    ?>>
     <header>
       <div class="container">
         <a href="<?php echo site_url(); ?>"><h1 class="nav-option <?php if (is_page('Home')) echo 'current-page'; ?>">HOME</h1></a>

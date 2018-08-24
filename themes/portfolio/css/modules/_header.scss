@@ -3,13 +3,13 @@ header {
 }
 
 .nav-option {
-  border-radius: 10px;
+  border-radius: 1rem;
   font-size: 4.5rem;
   font-weight: normal;
-  height: 100px;
-  line-height: 100px;
+  height: 10rem;
+  line-height: 10rem;
   text-align: center;
-  width: 340px;
+  width: 34rem;
 
   &:first-of-type {
     margin-left: $margin-space;

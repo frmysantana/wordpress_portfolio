@@ -1,21 +1,33 @@
 $red: rgb(230, 30, 30);
 $blue: rgb(18, 154, 222);
 
-$margin-space: 160px;
+$margin-space: 16rem;
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
   
 body {
+  box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
   margin: 0;
+
+  // so that the page takes up at least the whole viewport, in case the content isn't large enough to cover it by itself.
+  // also see .footer--fill-page in _footer.scss
+  &--fill-page {
+    min-height: 100vh;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
 }
 
 a {
@@ -29,11 +41,11 @@ a {
   justify-content: space-between;
   margin: 0 auto;
   height: 100%;
-  max-width: 1245px;
+  max-width: 124.5rem;
 }
 
 @mixin head-and-foot {
   background-color: $red;
-  height: 220px;
+  height: 22rem;
   width: 100%;
 }
