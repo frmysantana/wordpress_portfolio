@@ -8,7 +8,8 @@
         the_post(); ?>
 
         <div class="container <?php if (is_home() AND get_post_count() == 1) {echo "container__archive--single";} else {echo "container__archive";} ?>">
-          <img class="archive-image"<?php echo wp_get_attachment_image(get_field('project_image')[id], 'archiveSize'); ?><img>
+        <!-- outputs an image element for the corresponsing project image with the class "archive-image" -->
+          <?php echo wp_get_attachment_image(get_field('project_image')[id], 'archiveSize', false, array("class" => "archive-image")); ?>
           <div class="column">
             <h2 class="archive-title"><?php the_title(); ?></h2>
             <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
@@ -25,3 +26,4 @@
     
   </div>
 <?php get_footer(); ?>
+

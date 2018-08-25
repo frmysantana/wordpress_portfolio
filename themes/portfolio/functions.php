@@ -10,7 +10,13 @@
 
   function portfolio_features() {
     add_theme_support('post-thumbnails');
+
+    /* SIZES    
+    550*450 - my image, home page latest project, & individual projects
+    364 * 254 - blog archive pages
+    */
     add_image_size('archiveSize', 360, 250, true);
+    add_image_size('singleSize', 550, 450, true);
   };
 
   add_action('after_setup_theme', 'portfolio_features');

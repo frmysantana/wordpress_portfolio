@@ -107,13 +107,13 @@ footer a {
   text-align: center;
 }
 #about img {
-  height: 30rem;
-  width: 50rem;
   margin-top: 9rem;
-  margin-left: 8.5rem;
+  margin-left: 6.5rem;
 }
 #about p {
   font-size: 2.5rem;
+  margin: 0 auto;
+  width: 55rem;
 }
 
 #latest-projects {

@@ -11,6 +11,8 @@
     // is_home() checks if the current page is the blog index
     if(is_home() AND $post_count == 1) { echo 'class="body--fill-page"';} 
     ?>>
+<H1>todo: 1. 404 PAGE! 2. responsive styling 3. add new resume</H1>
+
     <header>
       <div class="container">
         <a href="<?php echo site_url(); ?>"><h1 class="nav-option <?php if (is_page('Home')) echo 'current-page'; ?>">HOME</h1></a>

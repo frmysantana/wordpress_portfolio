@@ -2,7 +2,8 @@
     <div id="about">
       <h3>About</h3>
       <div class="container">
-        <?php echo wp_get_attachment_image(get_the_author_meta('user_image', 1)); ?>
+        <!-- <img width=""> -->
+        <?php echo wp_get_attachment_image(get_the_author_meta('user_image', 1), 'singleSize'); ?>
         <p><?php echo get_the_author_meta('description', 1); ?></p>
       </div>        
     </div>
@@ -19,7 +20,7 @@
         echo "<div class='container'>";
         while($projects->have_posts()) {
           $projects->the_post(); ?>
-          <a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image(get_field('project_image')[id]); ?></a>
+          <a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image(get_field('project_image')[id], 'singleSize'); ?></a>
         <?php }
         echo "</div>";
         ?>

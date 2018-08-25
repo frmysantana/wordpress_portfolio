@@ -6,7 +6,7 @@
         <h2 class="section-title"><?php the_title(); ?></h2>
         <?php 
         echo "<div class='container'>";
-        echo wp_get_attachment_image(get_field('project_image')[id]); ?>
+        echo wp_get_attachment_image(get_field('project_image')[id], 'singleSize'); ?>
         <a href="<?php the_field('live_link'); ?>" target="_blank">See the project live.</a>
         <a href="<?php the_field('repo_link'); ?>" target="_blank">See the project repo.</a>
         <?php the_content(); ?>
