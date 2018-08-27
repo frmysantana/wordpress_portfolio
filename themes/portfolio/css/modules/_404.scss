@@ -1,0 +1,18 @@
+.not-found {
+    height: 100%;
+    max-width: 124.5rem;
+    display: block;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 7rem;
+        margin: 8rem auto;
+        width: 80%;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 5rem;
+        margin: 7rem 0;
+    }
+}
