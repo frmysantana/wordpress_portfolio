@@ -106,9 +106,22 @@ footer a {
   font-weight: 900;
   text-align: center;
 }
-#about img {
+#about .creator-img {
+  height: 45rem;
+  width: 55rem;
   margin-top: 9rem;
   margin-left: 6.5rem;
+}
+#about .creator-img + figcaption {
+  display: none;
+}
+@media (max-width: 900px) {
+  #about .creator-img + figcaption {
+    display: block;
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-left: 6.5rem;
+  }
 }
 #about p {
   font-size: 2.5rem;
@@ -129,6 +142,9 @@ footer a {
   margin-top: 11rem;
   margin-bottom: 8rem;
   width: 55rem;
+}
+#latest-projects figcaption {
+  display: none;
 }
 #latest-projects h4 {
   font-size: 2.5rem;
@@ -164,6 +180,11 @@ footer a {
 }
 .single .container p:last-of-type {
   margin-bottom: 10rem;
+}
+
+.archive-image {
+  height: 25rem;
+  width: 36rem;
 }
 
 .container__archive {
@@ -203,6 +224,23 @@ footer a {
 
 span.current {
   font-weight: bold;
+}
+
+.not-found {
+  height: 100%;
+  max-width: 124.5rem;
+  display: block;
+  margin: 0 auto;
+}
+.not-found__title {
+  font-size: 7rem;
+  margin: 8rem auto;
+  width: 80%;
+}
+.not-found__link {
+  display: inline-block;
+  font-size: 5rem;
+  margin: 7rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

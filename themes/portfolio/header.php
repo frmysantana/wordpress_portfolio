@@ -6,12 +6,12 @@
     <?php wp_head(); ?>
   </head>
   <?php $post_count = get_post_count();?>
-  <body <?php 
+  <body id="site_content" <?php 
     // conditionally apply fill classes only if their is 1 blog post summary on the blog page.
     // is_home() checks if the current page is the blog index
-    if(is_home() AND $post_count == 1) { echo 'class="body--fill-page"';} 
+    if((is_home() AND $post_count == 1) OR (is_404())) { echo 'class="body--fill-page"';} 
     ?>>
-<H1>todo: 1. 404 PAGE! 2. responsive styling 3. add new resume</H1>
+    <h1>todo: 1. responsive styling  2. add new resume</h1>
 
     <header>
       <div class="container">
