@@ -1,12 +1,3 @@
-$red: rgb(230, 30, 30);
-$blue: rgb(18, 154, 222);
-
-$margin-space: 16rem;
-
-html {
-  font-size: 62.5%;
-}
-
 *,
 *::after,
 *::before {
@@ -14,7 +5,12 @@ html {
   margin: 0;
   padding: 0;
 }
-  
+
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
@@ -42,10 +38,4 @@ a {
   margin: 0 auto;
   height: 100%;
   max-width: 124.5rem;
-}
-
-@mixin head-and-foot {
-  background-color: $red;
-  height: 22rem;
-  width: 100%;
 }

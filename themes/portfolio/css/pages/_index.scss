@@ -1,0 +1,87 @@
+.project {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  &__image {
+    height: 25rem;
+    width: 36rem;
+  
+  // @media (max-width: 900px) {
+  //   width: 124rem;
+  //   height: auto;
+  // }
+  }
+
+  &--single {
+    // so that a single blog post summary appears more centered
+    margin-top: 13rem;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+  }
+
+  &__details {
+    flex-direction: column;
+    margin-left: 10rem;
+  
+    &--summary {
+      font-size: 2.5rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  
+  // @media (max-width: 900px) {
+  //   display: none;
+  // }
+
+    &--mobile {
+      display: none;
+    
+      // @media (max-width: 900px) {
+      //   display: block;
+    
+      //   & * {
+      //     display: block;
+      //     text-align: center;
+      //   }
+    
+      //   & h2 {
+      //     font-size: 7.5rem;
+      //   }
+    
+      //   & p {
+      //     font-size: 3.5rem;
+      //   }
+      // }
+    }
+
+    &__read-more {
+      font-size: 2rem;
+    
+      &--button {
+        font-size: 4.5rem;
+        display: inline-block;
+        background-color: $red;
+        border-radius: 100px;
+        text-align: center;
+        padding: 4rem;
+        margin: 0 auto;
+        width: 30%;
+      }
+    }
+  }
+}
+  
+.container__pagination {
+  font-size: 3.8rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  max-width: 124.5rem;
+}
+
+span.current {
+  font-weight: bold;
+}

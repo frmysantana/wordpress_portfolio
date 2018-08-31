@@ -6,6 +6,7 @@
 
 // Resize script
 var responsive_window = function() {
+      
       //Max width is the width of the entire UI in pixels. So 1500 below is 1500px.
       var base_rem = parseInt($("html").css('font-size').substr(0, 2), 10);
       var max_width = 1450;
@@ -19,9 +20,11 @@ var responsive_window = function() {
         //   }
       });
   
+    //   debugger;
+
       function responsive_font() {
           var rem_perc, new_rem;
-          var window_width = $("#site_content").width();
+          var window_width = $("#site_content-js").width();
   
           if($(window).width() >= max_width){
               new_rem = base_rem;

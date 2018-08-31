@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <div>
+  <main>
     <?php
       $i = 0;
       
@@ -7,15 +7,21 @@
         $i += 1;
         the_post(); ?>
 
-        <div class="container <?php if (is_home() AND get_post_count() == 1) {echo "container__archive--single";} else {echo "container__archive";} ?>">
-        <!-- outputs an image element for the corresponsing project image with the class "archive-image" -->
-          <?php echo wp_get_attachment_image(get_field('project_image')[id], 'archiveSize', false, array("class" => "archive-image")); ?>
-          <div class="column">
-            <h2 class="archive-title"><?php the_title(); ?></h2>
-            <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
-            <a class="archive-read-more" href="<?php the_permalink(); ?>">Read more</a>
-          </div>
+      <div class="container <?php if (is_home() AND get_post_count() == 1) {echo "project--single";} else {echo "project";} ?>">
+      <!-- outputs an image element for the corresponsing project image with the class "archive-image" -->
+        <figure>
+          <?php echo wp_get_attachment_image(get_field('project_image')[id], 'archiveSize', false, array("class" => "project__image")); ?>
+          <figcaption class="project__details--mobile">
+            <h2 class="project__title"><?php the_title(); ?></h2>
+            <a class="project__details__read-more--button" href="<?php the_permalink(); ?>">Read more</a>         
+          </figcaption>
+        </figure>
+        <div class="project__details">
+          <h2 class="project__title"><?php the_title(); ?></h2>
+          <p class="project__details--summary"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
+          <a class="project__details__read-more" href="<?php the_permalink(); ?>">Read more</a>
         </div>
+      </div>
 
     <?php 
         if ($i != get_post_count()) echo "<hr class='container'>";
@@ -23,7 +29,6 @@
       }
       echo "<p class='container__pagination'>".paginate_links()."</p>";
     ?>
-    
-  </div>
+  </main>
 <?php get_footer(); ?>
 

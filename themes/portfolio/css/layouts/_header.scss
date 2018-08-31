@@ -1,4 +1,4 @@
-header {
+.header {
   @include head-and-foot;
 }
 
@@ -11,15 +11,15 @@ header {
   text-align: center;
   width: 34rem;
 
-  &:first-of-type {
+  &__home {
     margin-left: $margin-space;
   }
 
-  &:last-of-type {
+  &__projects {
     margin-right: $margin-space;
   }
-}
 
-.current-page {
-  background-color: $blue;
+  &--current-page {
+    background-color: $blue;
+  }
 }

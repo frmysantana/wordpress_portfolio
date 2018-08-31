@@ -3,16 +3,16 @@ Theme Name: My Portfolio
 Author: Fremy Santana
 Version: 1.0
 */
-html {
-  font-size: 62.5%;
-}
-
 *,
 *::after,
 *::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -41,7 +41,7 @@ a {
   max-width: 124.5rem;
 }
 
-header {
+.header {
   background-color: #e61e1e;
   height: 22rem;
   width: 100%;
@@ -56,97 +56,97 @@ header {
   text-align: center;
   width: 34rem;
 }
-.nav-option:first-of-type {
+.nav-option__home {
   margin-left: 16rem;
 }
-.nav-option:last-of-type {
+.nav-option__projects {
   margin-right: 16rem;
 }
-
-.current-page {
+.nav-option--current-page {
   background-color: #129ade;
 }
 
-footer {
+.footer {
   background-color: #e61e1e;
   height: 22rem;
   width: 100%;
-}
-footer p {
   font-size: 2rem;
 }
-footer a {
-  font-size: 1.6rem;
-  padding-left: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
 .footer--fill-page {
   position: absolute;
   top: 83%;
   left: 0;
 }
-
-.social-media-div {
+.footer__link {
+  font-size: 1.6rem;
+  padding-left: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.footer__social {
   display: flex;
   flex-direction: column;
 }
-
-#social-media {
+.footer__social--title {
   border-bottom: 0.3rem solid black;
   font-weight: 400;
 }
 
-#about {
+.section-about {
   margin-top: 5rem;
   margin-bottom: 15rem;
 }
-#about h3 {
+.section-about__title {
   font-size: 3.3rem;
   font-weight: 900;
   text-align: center;
 }
-#about .creator-img {
+.section-about__portrait {
   height: 45rem;
   width: 55rem;
   margin-top: 9rem;
   margin-left: 6.5rem;
 }
-#about .creator-img + figcaption {
+.section-about__portrait__caption {
   display: none;
-}
-@media (max-width: 900px) {
-  #about .creator-img + figcaption {
-    display: block;
-    font-size: 3rem;
-    margin-top: 0.5rem;
-    margin-left: 6.5rem;
+  /*
+  @media (max-width: 900px) {
+      display: block;
+      font-size: 3rem;
+      margin-top: 0.5rem;
+      margin-left: 6.5rem; 
   }
+  */
 }
-#about p {
+.section-about__bio {
   font-size: 2.5rem;
   margin: 0 auto;
   width: 55rem;
 }
+@media (max-width: 900px) {
+  .section-about__bio {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
 
-#latest-projects {
+.section__latest-projects {
   margin-top: 5rem;
   margin-bottom: 12rem;
 }
-#latest-projects h3 {
+.section__latest-projects__title {
   font-size: 3.5rem;
   text-align: center;
 }
-#latest-projects img {
+.section__latest-projects__screenshot {
   height: 45rem;
   margin-top: 11rem;
   margin-bottom: 8rem;
   width: 55rem;
 }
-#latest-projects figcaption {
+.section__latest-projects__screenshot__caption {
   display: none;
 }
-#latest-projects h4 {
+.section__latest-projects__see-all {
   font-size: 2.5rem;
   text-align: center;
 }
@@ -175,42 +175,52 @@ footer a {
   margin-bottom: 2rem;
 }
 .single .container p {
-  font-size: 2rem;
+  font-size: 3rem;
+  line-height: 5rem;
   text-indent: 5rem;
 }
 .single .container p:last-of-type {
   margin-bottom: 10rem;
 }
 
-.archive-image {
-  height: 25rem;
-  width: 36rem;
-}
-
-.container__archive {
+.project {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
-.container__archive--single {
+.project__image {
+  height: 25rem;
+  width: 36rem;
+}
+.project--single {
   margin-top: 13rem;
 }
-
-.archive-title {
+.project__title {
   font-size: 3.5rem;
 }
-
-.archive-read-more {
-  font-size: 2rem;
-}
-
-.column {
+.project__details {
   flex-direction: column;
   margin-left: 10rem;
 }
-.column p {
+.project__details--summary {
   font-size: 2.5rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+.project__details--mobile {
+  display: none;
+}
+.project__details__read-more {
+  font-size: 2rem;
+}
+.project__details__read-more--button {
+  font-size: 4.5rem;
+  display: inline-block;
+  background-color: #e61e1e;
+  border-radius: 100px;
+  text-align: center;
+  padding: 4rem;
+  margin: 0 auto;
+  width: 30%;
 }
 
 .container__pagination {

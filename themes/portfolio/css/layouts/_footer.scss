@@ -1,0 +1,29 @@
+.footer {
+  @include head-and-foot;
+  font-size: 2rem;
+
+  // so that the page takes up at least the whole viewport, in case the content isn't large enough to cover it by itself.
+  // also see .body--fill-page under _base.scss
+  &--fill-page {
+    position: absolute;
+    top: 83%;
+    left: 0;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    padding-left: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      border-bottom: 0.3rem solid black;
+      // font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+}
