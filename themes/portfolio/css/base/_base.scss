@@ -8,7 +8,21 @@
 
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 62.5% * 16 => 1rem is 10px
+
+  @include respond(tab-land) {
+    font-size: 56.25%;  // 1rem = 9px
+
+  }
+
+  @include respond(tab-port) {
+    font-size: 43.75%; // 1rem = 7px
+
+  }
+
+  @include respond(phone) {
+    font-size: 31.25%; // 1rem = 
+  }
 }
 
 body {
@@ -38,4 +52,12 @@ a {
   margin: 0 auto;
   height: 100%;
   max-width: 124.5rem;
+
+  @include respond(tab-land) {
+    max-width: 100rem;
+  }
+
+  @include respond(tab-port) {
+    max-width: 88rem;
+  }
 }

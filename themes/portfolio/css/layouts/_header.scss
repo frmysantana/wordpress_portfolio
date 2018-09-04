@@ -10,13 +10,42 @@
   line-height: 10rem;
   text-align: center;
   width: 34rem;
+  background-color: $blue;
+
+  @include respond(tab-land) {
+    font-size: 4rem;
+    width: 30rem; 
+  }
+
+  @include respond(phone) {
+    font-size: 3.5rem;
+    width: 22rem;
+  }
+
+  // @include 
 
   &__home {
-    margin-left: $margin-space;
+    margin-left: $margin-space-large;
+
+    @include respond(tab-land) {
+      margin-left: $margin-space-medium;
+    }
+
+    @include respond(tab-port) {
+      margin-left: $margin-space-small;
+    }
   }
 
   &__projects {
-    margin-right: $margin-space;
+    margin-right: $margin-space-large;
+
+    @include respond(tab-land) {
+      margin-right: $margin-space-medium;
+    }
+
+    @include respond(tab-port) {
+      margin-right: $margin-space-small;
+    }
   }
 
   &--current-page {

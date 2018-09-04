@@ -3,7 +3,7 @@
     // is_home() checks if the current page is the blog index
     if ((is_home() AND $post_count == 1) OR (is_404())) { echo 'footer--fill-page';} 
     ?>">
-      <div class="container">
+      <div class="container container--footer">
         <p>Designed and Coded by Fremy Santana.</p>
         <div class="footer__social">
           <p class="footer__social--title">Social Media</p>

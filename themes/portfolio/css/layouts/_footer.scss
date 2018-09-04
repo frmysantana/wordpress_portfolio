@@ -2,6 +2,15 @@
   @include head-and-foot;
   font-size: 2rem;
 
+  @include respond(tab-land) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(phone) {
+    font-size: 3.8rem;
+    height: 38rem;
+  }
+
   // so that the page takes up at least the whole viewport, in case the content isn't large enough to cover it by itself.
   // also see .body--fill-page under _base.scss
   &--fill-page {
@@ -14,6 +23,10 @@
     font-size: 1.6rem;
     padding-left: 1.8rem;
     margin-bottom: 0.5rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 
   &__social {
@@ -25,5 +38,13 @@
       // font-size: 2rem;
       font-weight: 400;
     }
+  }
+}
+
+.container--footer {
+  padding: 5rem 0;
+
+  @include respond(phone) {
+    flex-direction: column;
   }
 }
