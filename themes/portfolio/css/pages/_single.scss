@@ -4,6 +4,10 @@
   font-size: 3.5rem;
   font-weight: 900;
   text-align: center;
+
+  @include respond(phone) {
+    font-size: 5rem;
+  }
 }
 
 .single__screenshot {
@@ -21,20 +25,46 @@
   max-width: 124.5rem;
 
   &__live, &__git, a {
-    font-size: 2rem;
+    font-size: 3rem;    
   }
 
-  &__git {
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
     margin-bottom: 2rem;
+
+    &--single {
+      justify-content: center;
+    }
+    
+    @include respond(phone) {
+      width: 75%;
+    }
+  }
+
+  .single {
+    justify-content: center;
+  }
+
+  .button {
+    padding: 2rem;
+    border-radius: 100px;
+    background-color: $red;
   }
 
   p {
+    padding: 0 5rem;
     font-size: 3rem;
     line-height: 5rem;
     text-indent: 5rem;
   
     &:last-of-type {
       margin-bottom: 10rem;
+
+      @include respond(phone) {
+        margin-bottom: 7rem;
+      }
     }
   }
 }

@@ -2,14 +2,24 @@
   margin-top: 5rem;
   margin-bottom: 5rem;
 
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  
   &__image {
     height: 25rem;
     width: 36rem;
-  
-  // @media (max-width: 900px) {
-  //   width: 124rem;
-  //   height: auto;
-  // }
+
+    &--mobile {
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &--single {
@@ -19,56 +29,47 @@
 
   &__title {
     font-size: 3.5rem;
+
+    @include respond(phone) {
+      text-align: center;
+      font-size: 6.5rem;
+    }
   }
 
   &__details {
     flex-direction: column;
     margin-left: 10rem;
-  
+
+    @include respond(phone) {
+      margin: 0;
+      width: 100%;
+    }
+
     &--summary {
       font-size: 2.5rem;
       margin-top: 3rem;
       margin-bottom: 3rem;
-    }
-  
-  // @media (max-width: 900px) {
-  //   display: none;
-  // }
 
-    &--mobile {
-      display: none;
-    
-      // @media (max-width: 900px) {
-      //   display: block;
-    
-      //   & * {
-      //     display: block;
-      //     text-align: center;
-      //   }
-    
-      //   & h2 {
-      //     font-size: 7.5rem;
-      //   }
-    
-      //   & p {
-      //     font-size: 3.5rem;
-      //   }
-      // }
+      @include respond(phone) {
+        font-size: 4.5rem;
+      }
     }
 
     &__read-more {
-      font-size: 2rem;
-    
-      &--button {
-        font-size: 4.5rem;
-        display: inline-block;
-        background-color: $red;
-        border-radius: 100px;
-        text-align: center;
+      background-color: $red;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1.5rem;
+
+      @include respond(phone) {
+        display: block;
+        font-size: 3.5rem;
         padding: 4rem;
         margin: 0 auto;
         width: 30%;
       }
+     
     }
   }
 }
@@ -80,6 +81,14 @@
   margin-right: auto;
   height: 100%;
   max-width: 124.5rem;
+
+  @include respond(tab-land) {
+    max-width: 100rem;
+  }
+
+  @include respond(tab-port) {
+    max-width: 88rem;
+  }
 }
 
 span.current {

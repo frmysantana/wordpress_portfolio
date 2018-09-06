@@ -80,7 +80,6 @@ a {
   line-height: 10rem;
   text-align: center;
   width: 34rem;
-  background-color: #129ade;
 }
 @media only screen and (max-width: 75em) {
   .nav-option {
@@ -235,6 +234,11 @@ a {
   font-weight: 900;
   text-align: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .single__title {
+    font-size: 5rem;
+  }
+}
 
 .single__screenshot {
   margin-bottom: 12.5rem;
@@ -251,12 +255,32 @@ a {
   max-width: 124.5rem;
 }
 .single__container__live, .single__container__git, .single__container a {
-  font-size: 2rem;
+  font-size: 3rem;
 }
-.single__container__git {
+.single__container .links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
   margin-bottom: 2rem;
 }
+.single__container .links--single {
+  justify-content: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .single__container .links {
+    width: 75%;
+  }
+}
+.single__container .single {
+  justify-content: center;
+}
+.single__container .button {
+  padding: 2rem;
+  border-radius: 100px;
+  background-color: #e61e1e;
+}
 .single__container p {
+  padding: 0 5rem;
   font-size: 3rem;
   line-height: 5rem;
   text-indent: 5rem;
@@ -264,14 +288,35 @@ a {
 .single__container p:last-of-type {
   margin-bottom: 10rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .single__container p:last-of-type {
+    margin-bottom: 7rem;
+  }
+}
 
 .project {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .project {
+    flex-direction: column;
+  }
+}
 .project__image {
   height: 25rem;
   width: 36rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .project__image--mobile {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project__image {
+    width: 100%;
+    height: auto;
+  }
 }
 .project--single {
   margin-top: 13rem;
@@ -279,30 +324,47 @@ a {
 .project__title {
   font-size: 3.5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .project__title {
+    text-align: center;
+    font-size: 6.5rem;
+  }
+}
 .project__details {
   flex-direction: column;
   margin-left: 10rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .project__details {
+    margin: 0;
+    width: 100%;
+  }
 }
 .project__details--summary {
   font-size: 2.5rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.project__details--mobile {
-  display: none;
+@media only screen and (max-width: 37.5em) {
+  .project__details--summary {
+    font-size: 4.5rem;
+  }
 }
 .project__details__read-more {
-  font-size: 2rem;
-}
-.project__details__read-more--button {
-  font-size: 4.5rem;
-  display: inline-block;
   background-color: #e61e1e;
   border-radius: 100px;
   text-align: center;
-  padding: 4rem;
-  margin: 0 auto;
-  width: 30%;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .project__details__read-more {
+    display: block;
+    font-size: 3.5rem;
+    padding: 4rem;
+    margin: 0 auto;
+    width: 30%;
+  }
 }
 
 .container__pagination {
@@ -312,6 +374,16 @@ a {
   margin-right: auto;
   height: 100%;
   max-width: 124.5rem;
+}
+@media only screen and (max-width: 75em) {
+  .container__pagination {
+    max-width: 100rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container__pagination {
+    max-width: 88rem;
+  }
 }
 
 span.current {

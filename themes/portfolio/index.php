@@ -9,12 +9,8 @@
 
       <div class="container <?php if (is_home() AND get_post_count() == 1) {echo "project--single";} else {echo "project";} ?>">
       <!-- outputs an image element for the corresponsing project image with the class "archive-image" -->
-        <figure>
+        <figure class="project__image--mobile">
           <?php echo wp_get_attachment_image(get_field('project_image')[id], 'archiveSize', false, array("class" => "project__image")); ?>
-          <figcaption class="project__details--mobile">
-            <h2 class="project__title"><?php the_title(); ?></h2>
-            <a class="project__details__read-more--button" href="<?php the_permalink(); ?>">Read more</a>         
-          </figcaption>
         </figure>
         <div class="project__details">
           <h2 class="project__title"><?php the_title(); ?></h2>
