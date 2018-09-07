@@ -3,16 +3,22 @@
     max-width: 124.5rem;
     display: block;
     margin: 0 auto;
+    text-align: center;
 
     &__title {
         font-size: 7rem;
-        margin: 8rem auto;
-        width: 80%;
+        margin: 8rem 0;
+        text-align: center;
     }
 
     &__link {
         display: inline-block;
         font-size: 5rem;
         margin: 7rem 0;
+        text-align: center;
+
+        background-color: $red;
+        border-radius: 100px;
+        padding: 3rem;
     }
 }

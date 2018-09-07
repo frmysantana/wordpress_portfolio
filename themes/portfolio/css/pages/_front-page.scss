@@ -2,29 +2,43 @@
     margin-top: 5rem;
     margin-bottom: 15rem;
 
+    @include respond(phone) {
+        margin-bottom: 10rem;
+    }
+
     &__title {
         font-size: 3.3rem;
         font-weight: 900; 
         text-align: center;
     }
 
+    .portrait-figure {
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
     &__portrait {
         height: 45rem;
-        width: 55rem;    
-        margin-top: 9rem;
-        margin-left: 6.5rem;
+        width: 55rem;
+        margin: 9rem 3rem 0;    
+
+        @include respond(phone) {
+            width: 93%;
+            height: auto;
+            margin: 9rem 0 0;
+        }
 
         &__caption {
-        display: none;
+            display: none;
 
-        /*
-        @media (max-width: 900px) {
-            display: block;
-            font-size: 3rem;
-            margin-top: 0.5rem;
-            margin-left: 6.5rem; 
-        }
-        */
+            @include respond(phone) {
+                display: block;
+                font-size: 3rem;
+                margin-top: 0.5rem;
+                margin-left: 6.5rem; 
+            }
         }
     }
 
@@ -32,11 +46,13 @@
         font-size: 2.5rem;
         margin: 0 auto;
         width: 55rem;
+        text-indent: 4rem;
 
-        // @media (max-width: 900px) {
-        // opacity: 0;
-        // transform: translateX(100%);
-        // }
+        @include respond(phone) {
+            margin-top: 4rem;
+            text-indent: 3rem;
+            font-size: 3rem;   
+        }
     }
 }
 
@@ -48,12 +64,49 @@
       font-size: 3.5rem;
       text-align: center;
     }
+
+    &__sub-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
   
+    &__link {
+        @include respond(phone) {
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
     &__screenshot {
       height: 45rem;
       margin-top: 11rem;
       margin-bottom: 8rem;
       width: 55rem;
+
+      &:not(last-child) {
+        margin-right: 3rem;
+
+        @include respond(phone) {
+            margin-right: auto;
+        }
+      }
+
+      @include respond(tab-land) {
+        width: 45rem;
+        height: 36rem;
+      }
+
+      @include respond(tab-port) {
+        width: 39rem;
+        height: 32rem;
+      }
+
+      @include respond(phone) {
+        width: 93%;
+        height: auto;
+        margin: 6rem auto 5rem;
+      }
 
       &__caption {
         display: none;
@@ -64,5 +117,12 @@
     &__see-all {
       font-size: 2.5rem;
       text-align: center;
+    }
+}
+
+.container--home-page {
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
     }
 }
