@@ -81,6 +81,9 @@ a {
   text-align: center;
   width: 34rem;
 }
+.nav-option:hover {
+  color: #129ade;
+}
 @media only screen and (max-width: 75em) {
   .nav-option {
     font-size: 4rem;
@@ -122,6 +125,9 @@ a {
 .nav-option--current-page {
   background-color: #129ade;
 }
+.nav-option--current-page:hover {
+  color: black;
+}
 
 .footer {
   background-color: #e61e1e;
@@ -146,9 +152,13 @@ a {
   left: 0;
 }
 .footer__link {
+  display: inline-block;
   font-size: 1.6rem;
   padding-left: 1.8rem;
   margin-bottom: 0.5rem;
+}
+.footer__link:hover {
+  color: #129ade;
 }
 @media only screen and (max-width: 37.5em) {
   .footer__link {
@@ -254,6 +264,7 @@ a {
   margin-top: 11rem;
   margin-bottom: 8rem;
   width: 55rem;
+  transition: all 0.1s;
 }
 .section__latest-projects__screenshot:not(last-child) {
   margin-right: 3rem;
@@ -285,9 +296,15 @@ a {
 .section__latest-projects__screenshot__caption {
   display: none;
 }
+.section__latest-projects__screenshot:hover {
+  transform: scale(1.1);
+}
 .section__latest-projects__see-all {
   font-size: 2.5rem;
   text-align: center;
+}
+.section__latest-projects__see-all:hover {
+  color: #129ade;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -349,6 +366,9 @@ a {
   border-radius: 100px;
   background-color: #e61e1e;
 }
+.single__container .button:hover {
+  color: #129ade;
+}
 .single__container p {
   padding: 0 5rem;
   font-size: 3rem;
@@ -362,6 +382,9 @@ a {
   .single__container p:last-of-type {
     margin-bottom: 7rem;
   }
+}
+.single__container h4:hover {
+  color: #129ade;
 }
 
 .project {
@@ -380,12 +403,15 @@ a {
 @media only screen and (max-width: 37.5em) {
   .project__image--mobile {
     width: 100%;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .project__image {
-    width: 100%;
+    width: 93%;
     height: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 .project--single {
@@ -418,6 +444,8 @@ a {
 @media only screen and (max-width: 37.5em) {
   .project__details--summary {
     font-size: 4.5rem;
+    padding: 0 4rem;
+    text-indent: 4rem;
   }
 }
 .project__details__read-more {
@@ -433,8 +461,11 @@ a {
     font-size: 3.5rem;
     padding: 4rem;
     margin: 0 auto;
-    width: 30%;
+    width: 42%;
   }
+}
+.project__details__read-more:hover {
+  color: #129ade;
 }
 
 .container__pagination {
@@ -454,6 +485,9 @@ a {
   .container__pagination {
     max-width: 88rem;
   }
+}
+.container__pagination:hover {
+  color: #129ade;
 }
 
 span.current {

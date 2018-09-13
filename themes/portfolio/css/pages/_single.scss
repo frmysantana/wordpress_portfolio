@@ -34,6 +34,10 @@
     width: 50%;
     margin-bottom: 2rem;
 
+    // &:hover {
+    //   color: $blue;
+    // }
+
     &--single {
       justify-content: center;
     }
@@ -51,6 +55,10 @@
     padding: 2rem;
     border-radius: 100px;
     background-color: $red;
+
+    &:hover {
+      color: $blue;
+    }
   }
 
   p {
@@ -66,5 +74,10 @@
         margin-bottom: 7rem;
       }
     }
+
+  }
+
+  h4:hover {
+    color: $blue;
   }
 }

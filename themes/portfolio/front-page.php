@@ -13,7 +13,7 @@
     <hr class="container">
     <section class="section__latest-projects">
         <h3 class="section__latest-projects__title">Latest Projects</h3>
-        <h2 class="section__latest-projects__sub-title">Click one an image to see more details.</h2>
+        <h2 class="section__latest-projects__sub-title">Click on an image to see more details.</h2>
         <?php 
         
         $projects = new WP_Query(array(
