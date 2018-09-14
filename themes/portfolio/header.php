@@ -15,16 +15,19 @@
     <h1>todo: 1. responsive styling  2. add new resume</h1>
 
     <header class="header">
-      <div class="container">
+      <nav class="container">
         <a href="<?php echo site_url(); ?>">
           <h1 class="nav-option nav-option__home <?php if (is_page('Home')) echo 'nav-option--current-page'; ?>">
-            HOME
+            Home
           </h1>
         </a>
         <a href="<?php echo site_url('/blog'); ?>">
           <h1 class="nav-option nav-option__projects <?php if (get_queried_object_id() == 23) echo 'nav-option--current-page'; else echo "failed"; ?>">
-            ALL PROJECTS
+            Projects
           </h1>
         </a>
-      </div>      
+        <a class="nav-option" href="https://github.com/frmysantana" target="_blank">Github</a>
+        <a class="nav-option" href="https://www.linkedin.com/in/fremy-santana-5a714696" target="_blank">LinkedIn</a>
+        <p class="nav-option--email">Contact</p>
+      </nav>      
     </header>
