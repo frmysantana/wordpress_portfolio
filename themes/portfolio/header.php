@@ -15,19 +15,33 @@
     <h1>todo: 1. responsive styling  2. add new resume</h1>
 
     <header class="header">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">
+        <ul class="navigation__list">
+          <li class="navigation__item nav-option--phone <?php if (is_page('Home')) echo 'nav-option--current-page'; ?>"><a href="<?php echo site_url(); ?>" class="navigation__link">Home</a></li>
+          <li class="navigation__item nav-option--phone <?php if (get_queried_object_id() == 23) echo 'nav-option--current-page'; ?>"><a href="<?php echo site_url('/blog'); ?>" class="navigation__link">Projects</a></li>
+          <li class="navigation__item nav-option--phone"><a href="https://github.com/frmysantana" target="_blank" class="navigation__link">Github</a></li>
+          <li class="navigation__item nav-option--phone"><a href="https://www.linkedin.com/in/fremy-santana-5a714696" target="_blank" class="navigation__link">LinkedIn</a></li>
+          <li class="navigation__item nav-option--phone <?php if (get_queried_object_id() == 98) echo 'nav-option--current-page'; ?>"><a href="<?php echo site_url('/contact'); ?>" class="navigation__link">Contact</a></li>
+        </ul>
+      </div>
+      
       <nav class="container">
-        <a href="<?php echo site_url(); ?>">
-          <h1 class="nav-option nav-option__home <?php if (is_page('Home')) echo 'nav-option--current-page'; ?>">
+        <a href="<?php echo site_url(); ?>" class="nav-option nav-option__home <?php if (is_page('Home')) echo 'nav-option--current-page'; ?>">
             Home
-          </h1>
         </a>
-        <a href="<?php echo site_url('/blog'); ?>">
-          <h1 class="nav-option nav-option__projects <?php if (get_queried_object_id() == 23) echo 'nav-option--current-page'; else echo "failed"; ?>">
+        <a href="<?php echo site_url('/blog'); ?>" class="nav-option nav-option__projects <?php if (get_queried_object_id() == 23) echo 'nav-option--current-page'; 
+        // else echo "failed"; 
+        ?>">
             Projects
-          </h1>
         </a>
         <a class="nav-option" href="https://github.com/frmysantana" target="_blank">Github</a>
         <a class="nav-option" href="https://www.linkedin.com/in/fremy-santana-5a714696" target="_blank">LinkedIn</a>
-        <p class="nav-option--email">Contact</p>
+        <a class="nav-option nav-option--email <?php if (get_queried_object_id() == 98) echo 'nav-option--current-page'; ?>" href="<?php echo site_url('/contact'); ?>">Contact</a>
       </nav>      
     </header>

@@ -32,5 +32,11 @@
         <p class="section-about__bio"><?php echo get_the_author_meta('description', 1); ?></p>
       </div>        
     </section>
+    <hr class="container">
+    <section class="section-contact" id="contact">
+      <h3 class="section-contact__title">Contact</h3>
+    </section>
   </main>
-<?php get_footer(); ?>
+<?php get_footer(); 
+// [id]
+?>

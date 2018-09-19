@@ -70,6 +70,14 @@ a {
   background-color: #e61e1e;
   height: 22rem;
   width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    height: 0;
+  }
 }
 
 .nav-option {
@@ -90,14 +98,20 @@ a {
 @media only screen and (max-width: 75em) {
   .nav-option {
     font-size: 4rem;
-    width: 30rem;
+    width: 17rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .nav-option {
-    font-size: 3.5rem;
-    width: 22rem;
+    display: none;
   }
+}
+.nav-option--phone {
+  list-style: none;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  border-radius: 100px;
+  width: 30rem;
 }
 .nav-option--current-page {
   background-color: #129ade;
@@ -106,6 +120,89 @@ a {
   color: black;
 }
 
+.navigation__checkbox {
+  display: none;
+}
+.navigation__background {
+  display: none;
+}
+.navigation__button {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation__button {
+    background-color: #e61e1e;
+    display: inline-block;
+    text-align: center;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+    cursor: pointer;
+    position: fixed;
+    top: 11rem;
+    left: 5%;
+  }
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 3.2rem;
+}
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+}
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigation__icon::before {
+  top: -0.8rem;
+}
+.navigation__icon::after {
+  top: 0.8rem;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  display: inline-block;
+  background-color: #e61e1e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation__list {
+  margin-top: 3.5rem;
+}
+.navigation__item {
+  font-size: 5.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.navigation__checkbox:checked + .navigation__button {
+  left: 90%;
+  z-index: 1;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+/*
+  nav-item styles for when they're displayed in phone menu
+    font-size: 3.5rem;
+    width: 14rem;
+*/
 .footer {
   background-color: #e61e1e;
   height: 22rem;
@@ -120,7 +217,7 @@ a {
 @media only screen and (max-width: 37.5em) {
   .footer {
     font-size: 3.3rem;
-    height: 38rem;
+    height: 15rem;
   }
 }
 .footer--fill-page {
@@ -254,6 +351,15 @@ a {
 }
 .section__latest-projects__see-all:hover {
   color: #129ade;
+}
+
+.section-contact {
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+}
+.section-contact__title {
+  font-size: 3.3rem;
+  text-align: center;
 }
 
 @media only screen and (max-width: 37.5em) {

@@ -1,5 +1,15 @@
 .header {
-  @include head-and-foot;
+  background-color: $red;
+  height: 22rem;
+  width: 100%;
+
+  position: relative; // for the hamburger nav stuff
+  top: 0;
+  left: 0;
+
+  @include respond(phone) {
+    height: 0;
+  }
 }
 
 .nav-option {
@@ -21,37 +31,20 @@
 
   @include respond(tab-land) {
     font-size: 4rem;
-    width: 30rem; 
+    width: 17rem; 
   }
 
   @include respond(phone) {
-    font-size: 3.5rem;
-    width: 22rem;
+    display: none;
   }
 
-  // &__home {
-  //   margin-left: $margin-space-large;
-
-  //   @include respond(tab-land) {
-  //     margin-left: $margin-space-medium;
-  //   }
-
-  //   @include respond(tab-port) {
-  //     margin-left: $margin-space-small;
-  //   }
-  // }
-
-  // &__projects {
-  //   margin-right: $margin-space-large;
-
-  //   @include respond(tab-land) {
-  //     margin-right: $margin-space-medium;
-  //   }
-
-  //   @include respond(tab-port) {
-  //     margin-right: $margin-space-small;
-  //   }
-  // }
+  &--phone {
+    list-style: none;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    border-radius: 100px;
+    width: 30rem;
+  }
 
   &--current-page {
     background-color: $blue;

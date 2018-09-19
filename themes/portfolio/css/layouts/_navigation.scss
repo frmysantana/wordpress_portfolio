@@ -1,0 +1,103 @@
+.navigation {
+  
+  &__checkbox {
+    display: none;
+  }
+
+  &__background {
+    display: none;
+  }
+
+  &__button {
+    display: none;
+
+    @include respond(phone) {
+        background-color: $red;
+        display: inline-block;
+        text-align: center;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 2rem;
+        border: 2px solid black;
+        cursor: pointer;
+        position: fixed;
+        top: 11rem;
+        left: 5%;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.2rem;
+
+    &,
+    &::before,
+    &::after { // makes 3 horizontal bars
+      width: 3rem;
+      height: 2px;
+      background-color: black;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    display: inline-block;
+    background-color: $red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__list {
+    margin-top: 3.5rem;
+  }
+
+  &__item {
+    font-size: 5.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__checkbox:checked + &__button {
+    left: 90%;
+    z-index: 1;
+
+    & .navigation__icon {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}  
+
+/*
+  nav-item styles for when they're displayed in phone menu
+    font-size: 3.5rem;
+    width: 14rem;
+*/
+    

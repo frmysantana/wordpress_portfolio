@@ -26,5 +26,7 @@
       echo "<p class='container__pagination'>".paginate_links()."</p>";
     ?>
   </main>
-<?php get_footer(); ?>
+<?php get_footer(); 
+// [id]
+?>
 
