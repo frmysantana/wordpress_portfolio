@@ -65,6 +65,9 @@ a {
     max-width: 88rem;
   }
 }
+.container--column {
+  flex-direction: column;
+}
 
 .header {
   background-color: #e61e1e;
@@ -173,6 +176,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 .navigation__list {
   margin-top: 3.5rem;
@@ -284,6 +288,10 @@ a {
     text-indent: 3rem;
     font-size: 3rem;
   }
+}
+.section-about .resume-link {
+  color: #e61e1e;
+  font-weight: 600;
 }
 
 .section__latest-projects {
@@ -547,6 +555,64 @@ a {
 
 span.current {
   font-weight: bold;
+}
+
+.contact-page {
+  margin: 9rem auto;
+  font-size: 3rem;
+}
+.contact-page input:focus,
+.contact-page textarea:focus {
+  outline: none;
+  border: 3px solid #e61e1e;
+}
+.contact-page input[type=submit] {
+  background-color: #129ade;
+  font-size: 2rem;
+  padding: 2rem;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact-page input[type=submit] {
+    margin-top: 2rem;
+    width: 18rem;
+    height: 10rem;
+    font-size: 5rem;
+  }
+}
+.contact-page input[type=submit]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.contact-page .wpcf7 {
+  width: 75%;
+}
+.contact-page .wpcf7-text {
+  width: 35%;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border-style: solid;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact-page .wpcf7-text {
+    width: 100%;
+  }
+}
+.contact-page .wpcf7-textarea {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact-page .wpcf7-textarea {
+    width: 100%;
+  }
 }
 
 .not-found {

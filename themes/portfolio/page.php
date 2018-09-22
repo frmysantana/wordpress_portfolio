@@ -3,7 +3,7 @@
         <?php 
             while(have_posts()) {
                 the_post(); ?>
-                <div class="container">
+                <div class="container container--column contact-page">
                     <?php the_content(); ?>                    
                 <div>
         <?php

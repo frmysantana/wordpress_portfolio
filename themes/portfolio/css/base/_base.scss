@@ -60,4 +60,8 @@ a {
   @include respond(tab-port) {
     max-width: 88rem;
   }
+
+  &--column {
+    flex-direction: column;
+  }
 }

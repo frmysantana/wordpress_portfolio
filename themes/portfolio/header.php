@@ -12,7 +12,7 @@
       // is_home() checks if the current page is the blog index
       if((is_home() AND $post_count == 1) OR (is_404())) { echo 'class="body--fill-page"';}
     ?>>
-    <h1>todo: 1. responsive styling  2. add new resume</h1>
+    <h1>todo: 1. new header, refactor navbar 2. test CF7</h1>
 
     <header class="header">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -23,11 +23,21 @@
 
       <div class="navigation__background">
         <ul class="navigation__list">
-          <li class="navigation__item nav-option--phone <?php if (is_page('Home')) echo 'nav-option--current-page'; ?>"><a href="<?php echo site_url(); ?>" class="navigation__link">Home</a></li>
-          <li class="navigation__item nav-option--phone <?php if (get_queried_object_id() == 23) echo 'nav-option--current-page'; ?>"><a href="<?php echo site_url('/blog'); ?>" class="navigation__link">Projects</a></li>
-          <li class="navigation__item nav-option--phone"><a href="https://github.com/frmysantana" target="_blank" class="navigation__link">Github</a></li>
-          <li class="navigation__item nav-option--phone"><a href="https://www.linkedin.com/in/fremy-santana-5a714696" target="_blank" class="navigation__link">LinkedIn</a></li>
-          <li class="navigation__item nav-option--phone <?php if (get_queried_object_id() == 98) echo 'nav-option--current-page'; ?>"><a href="<?php echo site_url('/contact'); ?>" class="navigation__link">Contact</a></li>
+          <li class="navigation__item nav-option--phone <?php if (is_page('Home')) echo 'nav-option--current-page'; ?>">
+            <a href="<?php echo site_url(); ?>" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item nav-option--phone <?php if (get_queried_object_id() == 23) echo 'nav-option--current-page'; ?>">
+            <a href="<?php echo site_url('/blog'); ?>" class="navigation__link">Projects</a>
+          </li>
+          <li class="navigation__item nav-option--phone">
+            <a href="https://github.com/frmysantana" target="_blank" class="navigation__link">Github</a>
+          </li>
+          <li class="navigation__item nav-option--phone">
+            <a href="https://www.linkedin.com/in/fremy-santana-5a714696" target="_blank" class="navigation__link">LinkedIn</a>
+          </li>
+          <li class="navigation__item nav-option--phone <?php if (get_queried_object_id() == 98) echo 'nav-option--current-page'; ?>">
+            <a href="<?php echo site_url('/contact'); ?>" class="navigation__link">Contact</a>
+          </li>
         </ul>
       </div>
       

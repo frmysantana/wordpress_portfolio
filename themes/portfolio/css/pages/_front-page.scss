@@ -54,6 +54,12 @@
             font-size: 3rem;   
         }
     }
+
+    .resume-link {
+        color: $red;
+        font-weight: 600;
+        cursor: pointer;
+    }
 }
 
 .section__latest-projects {
