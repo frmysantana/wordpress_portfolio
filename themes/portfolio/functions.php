@@ -15,9 +15,11 @@
     /* SIZES    
     550*450 - my image, home page latest project, & individual projects
     364 * 254 - blog archive pages
+    1912 * 400 - hero image in header
     */
     add_image_size('archiveSize', 360, 250, true);
     add_image_size('singleSize', 550, 450, true);
+    add_image_size('heroSize', 1912, 400);
   };
 
   add_action('after_setup_theme', 'portfolio_features');

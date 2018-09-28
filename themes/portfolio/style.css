@@ -53,7 +53,7 @@ a {
   justify-content: space-between;
   margin: 0 auto;
   height: 100%;
-  max-width: 124.5rem;
+  max-width: 140rem;
 }
 @media only screen and (max-width: 75em) {
   .container {
@@ -69,65 +69,30 @@ a {
   flex-direction: column;
 }
 
-.header {
+.hero img {
+  width: 100%;
+}
+
+.nav {
   background-color: #e61e1e;
   height: 22rem;
   width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
+  margin-top: -0.5rem;
+  z-index: -1;
 }
 @media only screen and (max-width: 37.5em) {
-  .header {
+  .nav {
     height: 0;
   }
-}
-
-.nav-option {
-  border-radius: 1rem;
-  font-size: 4.5rem;
-  font-weight: normal;
-  height: 10rem;
-  line-height: 10rem;
-  text-align: center;
-  width: 20rem;
-}
-.nav-option--email {
-  font-size: 4.5rem;
-}
-.nav-option:hover {
-  color: #129ade;
-}
-@media only screen and (max-width: 75em) {
-  .nav-option {
-    font-size: 4rem;
-    width: 17rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .nav-option {
-    display: none;
-  }
-}
-.nav-option--phone {
-  list-style: none;
-  margin: 0 auto 2rem;
-  padding: 2rem;
-  border-radius: 100px;
-  width: 30rem;
-}
-.nav-option--current-page {
-  background-color: #129ade;
-}
-.nav-option--current-page:hover {
-  color: black;
 }
 
 .navigation__checkbox {
   display: none;
 }
-.navigation__background {
-  display: none;
+@media only screen and (max-width: 37.5em) {
+  .navigation__background {
+    display: none;
+  }
 }
 .navigation__button {
   display: none;
@@ -169,26 +134,62 @@ a {
 .navigation__icon::after {
   top: 0.8rem;
 }
-.navigation__checkbox:checked ~ .navigation__background {
-  display: inline-block;
-  background-color: #e61e1e;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-.navigation__list {
-  margin-top: 3.5rem;
+@media only screen and (max-width: 37.5em) {
+  .navigation__checkbox:checked ~ .navigation__background {
+    display: inline-block;
+    background-color: #e61e1e;
+    position: fixed;
+    padding-top: 10rem;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    z-index: 10;
+  }
 }
 .navigation__item {
-  font-size: 5.5rem;
+  border-radius: 1rem;
+  font-size: 4.5rem;
   text-align: center;
   margin-bottom: 2rem;
+  display: inline-block;
+  font-weight: normal;
+  height: 10rem;
+  line-height: 10rem;
+  text-align: center;
+  width: 24rem;
+}
+.navigation__item:hover {
+  color: #129ade;
+}
+@media only screen and (max-width: 75em) {
+  .navigation__item {
+    font-size: 4rem;
+    width: 17rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation__item {
+    display: none;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation__item--phone {
+    display: list-item;
+    list-style: none;
+    margin: 0 auto 2rem;
+    border-radius: 100px;
+    width: 30rem;
+  }
+}
+.navigation__item--current-page {
+  background-color: #129ade;
+}
+.navigation__item--current-page:hover {
+  color: black;
 }
 .navigation__checkbox:checked + .navigation__button {
   left: 90%;
-  z-index: 1;
+  z-index: 11;
 }
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
   background-color: transparent;
@@ -202,11 +203,6 @@ a {
   transform: rotate(-135deg);
 }
 
-/*
-  nav-item styles for when they're displayed in phone menu
-    font-size: 3.5rem;
-    width: 14rem;
-*/
 .footer {
   background-color: #e61e1e;
   height: 22rem;
@@ -292,6 +288,7 @@ a {
 .section-about .resume-link {
   color: #e61e1e;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .section__latest-projects {

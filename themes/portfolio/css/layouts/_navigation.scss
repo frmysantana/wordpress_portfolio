@@ -1,11 +1,25 @@
+.nav {
+  background-color: $red;
+  height: 22rem;
+  width: 100%;
+
+  margin-top: -0.5rem;
+  z-index: -1;
+
+  @include respond(phone) {
+    height: 0;
+  }
+}
+
 .navigation {
-  
   &__checkbox {
     display: none;
   }
 
   &__background {
-    display: none;
+    @include respond(phone) {
+      display: none; // so the standard nav bar isn't shown when the menu button hasn't been clicked/tapped
+    }
   }
 
   &__button {
@@ -57,28 +71,67 @@
   }
 
   &__checkbox:checked ~ &__background {
-    display: inline-block;
-    background-color: $red;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
-
-  &__list {
-    margin-top: 3.5rem;
+    @include respond(phone) {
+      display: inline-block;
+      background-color: $red;
+      position: fixed;
+      padding-top: 10rem;
+      top: 0;
+      left: 0;
+      min-width: 100%; // to override .container's max-width interference
+      z-index: 10;
+    }
   }
 
   &__item {
-    font-size: 5.5rem;
+    border-radius: 1rem;
+    font-size: 4.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    display: inline-block;
+    
+    font-weight: normal;
+    height: 10rem;
+    line-height: 10rem;
+    text-align: center;
+    width: 24rem;
+    
+    &:hover {
+      color: $blue;
+    }
+  
+    @include respond(tab-land) {
+      font-size: 4rem;
+      width: 17rem; 
+    }
+  
+    @include respond(phone) {
+      display: none;
+    }
+  
+    &--phone {
+      @include respond(phone) {
+        display: list-item;
+        list-style: none;
+        margin: 0 auto 2rem;
+        border-radius: 100px;
+        width: 30rem;
+      }
+    }
+
+    &--current-page {
+      background-color: $blue;
+  
+      &:hover {
+        color: black;
+      }
+    }
   }
 
+  // rotating menu button bars effect
   &__checkbox:checked + &__button {
     left: 90%;
-    z-index: 1;
+    z-index: 11;
 
     & .navigation__icon {
       background-color: transparent;
@@ -95,10 +148,3 @@
     }
   }
 }  
-
-/*
-  nav-item styles for when they're displayed in phone menu
-    font-size: 3.5rem;
-    width: 14rem;
-*/
-    
