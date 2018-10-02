@@ -14,10 +14,11 @@
     ?>>
     <h1>todo: 1. new header 2. test CF7</h1>
 
-    <header>
-      <div class="hero">
-        <?php echo wp_get_attachment_image(108, 'heroSize'); ?>
-      </div>
+    <header class="header">
+      <?php echo wp_get_attachment_image(110, array('250', '250'), false, array("class" => "header__logo")); ?>
+      <?php echo wp_get_attachment_image(108, 'heroSize', false, array("class" => "header__hero")); ?>
+      <!-- <div class="hero"> -->
+      <!-- </div> -->
     </header>
 
     <nav class="nav">
