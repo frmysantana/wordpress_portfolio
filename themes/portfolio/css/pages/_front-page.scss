@@ -47,6 +47,7 @@
         margin: 0 auto;
         width: 55rem;
         text-indent: 4rem;
+        margin-bottom: 2rem;
 
         @include respond(phone) {
             margin-top: 4rem;

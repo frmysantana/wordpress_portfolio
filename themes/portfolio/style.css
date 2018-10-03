@@ -54,6 +54,7 @@ a {
   margin: 0 auto;
   height: 100%;
   max-width: 140rem;
+  padding: 0 3rem;
 }
 @media only screen and (max-width: 75em) {
   .container {
@@ -81,6 +82,47 @@ a {
   position: absolute;
   top: 20%;
   left: 10%;
+  width: 25rem;
+  height: 25rem;
+}
+@media only screen and (max-width: 75em) {
+  .header__logo {
+    width: 20rem;
+    height: 20rem;
+    top: 27%;
+    left: 10%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .header__logo {
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header__logo {
+    top: 33%;
+  }
+}
+.header__greeting {
+  color: #e61e1e;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px black, -1px -1px 10px black;
+  font-size: 10rem;
+  position: absolute;
+  right: 10%;
+  top: 35%;
+}
+@media only screen and (max-width: 56.25em) {
+  .header__greeting {
+    font-size: 9rem;
+    top: 38%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header__greeting {
+    font-size: 8rem;
+    top: 41%;
+  }
 }
 
 .nav {
@@ -287,6 +329,7 @@ a {
   margin: 0 auto;
   width: 55rem;
   text-indent: 4rem;
+  margin-bottom: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .section-about__bio {

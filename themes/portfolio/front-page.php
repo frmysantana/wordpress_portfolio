@@ -28,7 +28,7 @@
     </section>
     <hr class="container">
     <section class="section-about">
-      <h3 class="section-about__title">About</h3>
+      <h3 class="section-about__title">About Me</h3>
       <div class="container container--home-page">
         <!-- <img width=""> -->
         <figure class="portrait-figure">

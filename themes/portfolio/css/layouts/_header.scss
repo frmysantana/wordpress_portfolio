@@ -11,5 +11,42 @@
     position: absolute;
     top: 20%;
     left: 10%;
+    width: 25rem;
+    height: 25rem;
+
+    @include respond(tab-land) {
+      width: 20rem;
+      height: 20rem;
+      top: 27%;
+      left: 10%;
+    }
+
+    @include respond(tab-port) {
+      top: 30%;
+    }
+
+    @include respond(phone) {
+      top: 33%;
+    }
+  }
+
+  &__greeting {
+    color: $red;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px black, -1px -1px 10px black;
+    font-size: 10rem;
+    position: absolute;
+    right: 10%;
+    top: 35%;
+
+    @include respond(tab-port) {
+      font-size: 9rem;
+      top: 38%;
+    }
+
+    @include respond(phone) {
+      font-size: 8rem;
+      top: 41%;
+    }
   }
 }

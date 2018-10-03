@@ -12,13 +12,11 @@
       // is_home() checks if the current page is the blog index
       if((is_home() AND $post_count == 1) OR (is_404())) { echo 'class="body--fill-page"';}
     ?>>
-    <h1>todo: 1. new header 2. test CF7</h1>
 
     <header class="header">
       <?php echo wp_get_attachment_image(110, array('250', '250'), false, array("class" => "header__logo")); ?>
-      <?php echo wp_get_attachment_image(108, 'heroSize', false, array("class" => "header__hero")); ?>
-      <!-- <div class="hero"> -->
-      <!-- </div> -->
+      <?php echo wp_get_attachment_image(115, 'heroSize', false, array("class" => "header__hero")); ?>
+      <p class="header__greeting">Welcome!</p>
     </header>
 
     <nav class="nav">
