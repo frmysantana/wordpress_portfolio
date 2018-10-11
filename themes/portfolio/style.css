@@ -35,12 +35,6 @@ body {
   font-family: "Libre Franklin", sans-serif;
   margin: 0;
 }
-body--fill-page {
-  min-height: 100vh;
-  position: relative;
-  top: 0;
-  right: 0;
-}
 
 a {
   color: inherit;
@@ -271,11 +265,6 @@ a {
     font-size: 3.3rem;
     height: 15rem;
   }
-}
-.footer--fill-page {
-  position: absolute;
-  top: 83%;
-  left: 0;
 }
 .footer__tag-line {
   margin: 0 auto;

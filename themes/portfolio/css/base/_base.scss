@@ -29,15 +29,6 @@ body {
   box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
   margin: 0;
-
-  // so that the page takes up at least the whole viewport, in case the content isn't large enough to cover it by itself.
-  // also see .footer--fill-page in _footer.scss
-  &--fill-page {
-    min-height: 100vh;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
 }
 
 a {

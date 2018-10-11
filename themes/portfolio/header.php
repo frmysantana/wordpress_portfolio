@@ -10,8 +10,9 @@
     <?php 
       // conditionally apply fill classes only if there is 1 blog post summary on the blog page.
       // is_home() checks if the current page is the blog index
-      if((is_home() AND $post_count == 1) OR (is_404())) { echo 'class="body--fill-page"';}
-    ?>>
+      // if((is_home() AND $post_count == 1) OR (is_404())) { echo 'class="body--fill-page"';}
+    ?>
+    >
 
     <header class="header">
       <?php echo wp_get_attachment_image(110, array('250', '250'), false, array("class" => "header__logo")); ?>
