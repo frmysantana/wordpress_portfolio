@@ -35,8 +35,7 @@
           <?php echo wp_get_attachment_image(get_the_author_meta('user_image', 1), 'singleSize', false, array("class" => "section-about__portrait")); ?>
         </figure>
         <div class="containter--column">
-          <p class="section-about__bio"><?php echo get_the_author_meta('description', 1); ?></p>
-          <p class="section-about__bio">You can also see my resume <span class="resume-link"><?php echo $content; ?></span>.</p>
+          <p class="section-about__bio"><?php echo $content; ?></p>
         </div>
       </div>        
     </section>

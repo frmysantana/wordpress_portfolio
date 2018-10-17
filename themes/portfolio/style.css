@@ -433,6 +433,8 @@ a {
   margin-bottom: 12.5rem;
   height: 45rem;
   width: 55rem;
+  border: 0.1rem solid black;
+  border-radius: 1rem;
 }
 
 .single__container {

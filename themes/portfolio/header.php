@@ -7,15 +7,10 @@
   </head>
   <?php $post_count = get_post_count(); ?>
   <body id="site_content-js"
-    <?php 
-      // conditionally apply fill classes only if there is 1 blog post summary on the blog page.
-      // is_home() checks if the current page is the blog index
-      // if((is_home() AND $post_count == 1) OR (is_404())) { echo 'class="body--fill-page"';}
-    ?>
     >
 
     <header class="header">
-      <?php echo wp_get_attachment_image(110, array('250', '250'), false, array("class" => "header__logo")); ?>
+      <?php echo wp_get_attachment_image(122, array('250', '250'), false, array("class" => "header__logo")); ?>
       <?php echo wp_get_attachment_image(115, 'heroSize', false, array("class" => "header__hero")); ?>
       <p class="header__greeting">Welcome!</p>
     </header>
