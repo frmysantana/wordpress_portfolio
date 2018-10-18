@@ -89,6 +89,7 @@
   margin-right: auto;
   height: 100%;
   max-width: 124.5rem;
+  padding: 0 3rem;
 
   @include respond(tab-land) {
     max-width: 100rem;

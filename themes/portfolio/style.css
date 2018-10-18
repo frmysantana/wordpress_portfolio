@@ -3,6 +3,10 @@ Theme Name: My Portfolio
 Author: Fremy Santana
 Version: 1.0
 */
+.u-top-margin {
+  margin-top: 3rem !important;
+}
+
 *,
 *::after,
 *::before {
@@ -116,6 +120,12 @@ a {
   .header__greeting {
     font-size: 8rem;
     top: 41%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -293,13 +303,14 @@ a {
 .section-about__portrait {
   height: 45rem;
   width: 55rem;
-  margin: 9rem 3rem 0;
+  margin: 3rem;
+  float: left;
 }
 @media only screen and (max-width: 37.5em) {
   .section-about__portrait {
-    width: 93%;
-    height: auto;
-    margin: 9rem 0 0;
+    width: 41rem;
+    height: 33.5rem;
+    margin: 3rem;
   }
 }
 .section-about__portrait__caption {
@@ -314,14 +325,19 @@ a {
   }
 }
 .section-about__bio {
-  font-size: 2.5rem;
+  margin-top: 5rem;
+}
+.section-about__bio p {
+  font-size: 2.8rem;
   margin: 0 auto;
-  width: 55rem;
+  width: 100%;
   text-indent: 4rem;
-  margin-bottom: 2rem;
+}
+.section-about__bio p a {
+  color: #e61e1e;
 }
 @media only screen and (max-width: 37.5em) {
-  .section-about__bio {
+  .section-about__bio p {
     margin-top: 4rem;
     text-indent: 3rem;
     font-size: 3rem;
@@ -579,6 +595,7 @@ a {
   margin-right: auto;
   height: 100%;
   max-width: 124.5rem;
+  padding: 0 3rem;
 }
 @media only screen and (max-width: 75em) {
   .container__pagination {

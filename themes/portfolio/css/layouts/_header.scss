@@ -49,4 +49,9 @@
       top: 41%;
     }
   }
+
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+  }
 }
