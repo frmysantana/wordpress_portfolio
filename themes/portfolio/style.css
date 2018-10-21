@@ -326,12 +326,14 @@ a {
 }
 .section-about__bio {
   margin-top: 5rem;
+  width: 100%;
 }
 .section-about__bio p {
   font-size: 2.8rem;
   margin: 0 auto;
   width: 100%;
   text-indent: 4rem;
+  line-height: 2;
 }
 .section-about__bio p a {
   color: #e61e1e;
@@ -397,7 +399,7 @@ a {
 }
 @media only screen and (max-width: 37.5em) {
   .section__latest-projects__screenshot {
-    width: 93%;
+    width: 80%;
     height: auto;
     margin: 6rem auto 5rem;
   }
@@ -490,6 +492,7 @@ a {
   color: #129ade;
 }
 .single__container p {
+  width: 100%;
   padding: 0 5rem;
   font-size: 3rem;
   line-height: 5rem;
@@ -618,6 +621,9 @@ span.current {
 .contact-page {
   margin: 9rem auto;
   font-size: 3rem;
+}
+.contact-page p {
+  width: 100%;
 }
 .contact-page input:focus,
 .contact-page textarea:focus {

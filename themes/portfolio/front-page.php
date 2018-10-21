@@ -5,11 +5,6 @@
         <h2 class="section__latest-projects__sub-title">Click on an image to see more details.</h2>
         <?php 
 
-        // while (have_posts()) {
-        //   the_post();
-        //   echo the_content();
-        // }
-
         $projects = new WP_Query(array(
           'posts_per_page' => 2
         ));

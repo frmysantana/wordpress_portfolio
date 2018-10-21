@@ -5,7 +5,7 @@
                 the_post(); ?>
                 <div class="container container--column contact-page">
                     <?php the_content(); ?>                    
-                <div>
+                </div>
         <?php
             }
         ?>
