@@ -15,5 +15,9 @@
 
   &__tag-line {
     margin: 0 auto;
+    
+    & a {
+      color: $blue;
+    }
   }
 }

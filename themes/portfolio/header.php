@@ -10,8 +10,8 @@
     >
 
     <header class="header">
-      <?php echo wp_get_attachment_image(122, array('250', '250'), false, array("class" => "header__logo")); ?>
-      <?php echo wp_get_attachment_image(115, 'heroSize', false, array("class" => "header__hero")); ?>
+      <?php echo wp_get_attachment_image(137, array('250', '250'), false, array("class" => "header__logo")); ?>
+      <?php echo wp_get_attachment_image(136, 'heroSize', false, array("class" => "header__hero")); ?>
       <p class="header__greeting">Welcome!</p>
     </header>
 

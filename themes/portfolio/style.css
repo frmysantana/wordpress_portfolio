@@ -279,6 +279,9 @@ a {
 .footer__tag-line {
   margin: 0 auto;
 }
+.footer__tag-line a {
+  color: #129ade;
+}
 
 .section-about {
   margin-top: 5rem;
