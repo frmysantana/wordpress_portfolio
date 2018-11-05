@@ -25,7 +25,7 @@
 
     <hr class="container">
     
-    <section class="section-about">
+    <section class="section-about" id="about">
       <h3 class="section-about__title">About Me</h3>
       <div class="container container--home-page">
         <!-- <img width=""> -->
@@ -37,7 +37,7 @@
             <!-- <figure class="portrait-figure"> -->
               <!-- <?php echo wp_get_attachment_image(get_the_author_meta('user_image', 1), 'singleSize', false, array("class" => "section-about__portrait")); ?> -->
             <!-- </figure> -->
-            If anything you see on my website piques your interest, feel free to use my <a href="<?php echo site_url('/contact'); ?>">contact page</a> to send me a message! You can also see my <a href="<?php echo wp_get_attachment_url(104); ?>">resume here</a>.</p>
+            If anything you see on my website piques your interest, feel free to use my <a href="<?php echo site_url('/contact'); ?>">contact page</a> to send me a message! You can also see my <a href="<?php echo wp_get_attachment_url(159); ?>">resume here</a>.</p>
 
           <p class="u-top-margin">
             Outside of web development, I am avidly curious about music. I enjoy (deeply) listening and trying various styles/genres of music. 

@@ -10,11 +10,12 @@
 
   @include respond(phone) {
     font-size: 3.3rem;
-    height: 15rem;
+    height: 20rem;
   }
 
   &__tag-line {
     margin: 0 auto;
+    text-align: center;
     
     & a {
       color: $blue;

@@ -273,11 +273,12 @@ a {
 @media only screen and (max-width: 37.5em) {
   .footer {
     font-size: 3.3rem;
-    height: 15rem;
+    height: 20rem;
   }
 }
 .footer__tag-line {
   margin: 0 auto;
+  text-align: center;
 }
 .footer__tag-line a {
   color: #129ade;
