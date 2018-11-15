@@ -25,13 +25,13 @@
 
         <ul class="container navigation__background">
           <li class="navigation__item navigation__item--phone <?php if (is_page('Home')) echo 'navigation__item--current-page'; ?>">
-            <a href="<?php echo site_url(); ?>" class="navigation__link">Home</a>
+            <a href="<?php echo esc_url(site_url()); ?>" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item navigation__item--phone <?php if (get_queried_object_id() == 23) echo 'navigation__item--current-page'; ?>">
-            <a href="<?php echo site_url('/blog'); ?>" class="navigation__link">Projects</a>
+            <a href="<?php echo esc_url(site_url('/blog')); ?>" class="navigation__link">Projects</a>
           </li>
           <li class="navigation__item navigation__item--phone <?php if (get_queried_object_id() == 98) echo 'navigation__item--current-page'; ?>">
-            <a href="<?php echo site_url('/contact'); ?>" class="navigation__link">Contact</a>
+            <a href="<?php echo esc_url(site_url('/contact')); ?>" class="navigation__link">Contact</a>
           </li>
           <li class="navigation__item navigation__item--phone">
             <a href="https://github.com/frmysantana" target="_blank" class="navigation__link">Github</a>
